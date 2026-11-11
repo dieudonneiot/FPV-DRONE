@@ -5,8 +5,11 @@ work: deep research first, then a documented plan, then tested code with CI.
 
 ## Status
 
-Repository set up. Nothing is decided yet: the goal, rules and hardware come
-out of phase 1.
+The host environment is Ubuntu 26.04 with ROS 2 Lyrical and Gazebo Jetty
+installed and smoke-tested. The drone's purpose, competition rules and
+hardware still need to be established.
+
+See [the findings log](docs/FINDINGS.md) and [decisions](docs/DECISIONS.md).
 
 ## How we work
 
@@ -23,15 +26,18 @@ out of phase 1.
 
 ## Questions to answer first
 
+- **Development environment:** Ubuntu 26.04, then ROS 2 Lyrical, then Gazebo
+  Jetty. ROS workspaces and project tools go under `DEVELOPER/tools/`; system
+  packages are installed through Ubuntu's package manager.
 - **Purpose:** racing, freestyle, a competition (which one and which category),
   or a mission such as inspection or search?
 - **Rules and regulations:** the rules that apply, and the legal radio bands for
   video and control in the country where we fly.
 - **Hardware:** frame size, flight controller, video system (analogue or digital)
   and radio link.
-- **Firmware:** an existing flight stack (Betaflight, INAV, ArduPilot or PX4)
-  configured and extended, or our own code. Some competitions require original
-  software.
+- **Firmware:** Betaflight can be installed and tried separately; confirm the
+  flight controller and project requirements before choosing firmware for the
+  ROS/Gazebo work. Some competitions require original software.
 - **Team:** skills and the available time.
 
 ## Planned layout
